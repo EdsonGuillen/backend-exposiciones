@@ -10,6 +10,8 @@ const authRoutes       = require('./routes/auth')
 const materiasRoutes   = require('./routes/materias')
 const recursosRoutes   = require('./routes/recursos')
 const evaluacionRoutes = require('./routes/evaluaciones')
+const gruposRoutes   = require('./routes/grupos')
+const alumnosRoutes   = require('./routes/alumnos')
 
 const BASE = '/api/v1'
 
@@ -17,6 +19,8 @@ app.use(`${BASE}/auth`,         authRoutes)
 app.use(`${BASE}/materias`,     materiasRoutes)
 app.use(`${BASE}/criterios`,    evaluacionRoutes)
 app.use(`${BASE}/evaluaciones`, evaluacionRoutes)
+app.use(`${BASE}/grupos`,       gruposRoutes)
+app.use(`${BASE}/alumnos`,      alumnosRoutes)
 app.use(BASE,                   recursosRoutes)
 
 // Health check
